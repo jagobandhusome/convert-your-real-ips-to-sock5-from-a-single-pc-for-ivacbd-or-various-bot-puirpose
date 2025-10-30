@@ -34,20 +34,23 @@ python Create-Socks5.py --bind_ip_port 0.0.0.0:1080 --bind_ip_port 127.0.0.1:108
 ```
 --bind_ip_port: Specify IP address and port to bind to (can be used multiple times)
 ```
-Examples
+## Examples
 Single binding:
 
-bash
+```bash
 python Create-Socks5.py --bind_ip_port 0.0.0.0:1080
-Multiple bindings:
+```
+### Multiple bindings:
 
-bash
+```bash
 python Create-Socks5.py --bind_ip_port 0.0.0.0:1080 --bind_ip_port 127.0.0.1:1081 --bind_ip_port 192.168.1.100:1082
+```
 Localhost only:
 
-bash
+```bash
 python Create-Socks5.py --bind_ip_port 127.0.0.1:1080
-How It Works
+```
+### How It Works
 Handshake: Performs SOCKS5 protocol handshake with client
 
 Request Handling: Processes client connection requests
@@ -63,7 +66,7 @@ Domain Name (ATYP = 3)
 
 IPv6 (ATYP = 4)
 
-Code Structure
+### Code Structure
 Socks5Server class: Main thread class handling individual client connections
 
 handle_handshake(): Performs SOCKS5 protocol negotiation
@@ -74,7 +77,7 @@ relay_traffic(): Relays data between client and remote server
 
 start_socks5_proxy(): Starts the proxy server listener
 
-Security Notes
+## Security Notes
 ⚠️ Important Security Considerations:
 
 This proxy does not include authentication - anyone with network access can use it
@@ -85,7 +88,7 @@ Use firewall rules to restrict access as needed
 
 Consider implementing authentication for production use
 
-Limitations
+## Limitations
 No authentication support
 
 No UDP support (TCP only)
@@ -94,7 +97,7 @@ No logging or monitoring features
 
 Basic error handling
 
-Contributing
+### Contributing
 Feel free to fork and submit pull requests for improvements such as:
 
 Authentication support
@@ -107,5 +110,5 @@ Performance optimizations
 
 Security enhancements
 
-License
+### License
 This project is provided as-is for educational and development purposes.
