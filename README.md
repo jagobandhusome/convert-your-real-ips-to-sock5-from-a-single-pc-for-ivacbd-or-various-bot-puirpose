@@ -29,10 +29,11 @@ Run the script with one or more binding addresses:
 
 ```bash
 python Create-Socks5.py --bind_ip_port 0.0.0.0:1080 --bind_ip_port 127.0.0.1:1081
-
-Command Line Arguments
+```
+## Command Line Arguments
+```
 --bind_ip_port: Specify IP address and port to bind to (can be used multiple times)
-
+```
 Examples
 Single binding:
 
